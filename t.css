@@ -9,33 +9,36 @@ body {
 }
 
 .blob-btn {
-    z-index: 1;
-    position: relative;
-    padding: 20px 46px;
-    margin-bottom: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #0505A9;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: transparent;
-    outline: none;
+   
+
+    width: 220px;
+    height: 50px;
     border: none;
-    transition: color 0.5s;
+    outline: none;
+    color: #000000;
+    background: #111;
     cursor: pointer;
-    border-radius: 30px;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
 }
 
 .blob-btn:before {
-    content: "";
-    z-index: 1;
+    
+
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    border: 2px solid #0505A9;
-    border-radius: 30px;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1; 
+    border-radius: 10px;
 }
 
 .blob-btn:after {
@@ -50,8 +53,42 @@ body {
     border-radius: 30px;
 }
 
+
+
+
+
+.blob-btn:active {
+    color: #000
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .blob-btn:hover {
-    color: #FFFFFF;
+    color: #ffffff;
     border-radius: 30px;
 }
 
